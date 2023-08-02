@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --tt-font:'Mulish', sans-serif;
+    --bg-color: #121214;
+    --bg-card: #202024;
+    --title-color: #02799D;
+    --tt-color-primary: white;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--bg-color);
+}
+
+body * {
+    font-family: var(--tt-font);
+}
+
+#content {
+    margin-inline: auto;
+    place-content: center;
+    margin-inline: auto;
+    padding: 7.3rem;
+    max-width: 144.7rem;
+}
+
+header {
+    padding-bottom: 7rem;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: var(--title-color)
+}
+
+header p {
+    font-size: 3.2rem;
+    color: var(--tt-color-primary);
+}
+
+img {
+    border-radius: .8rem .8rem 0 0;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    place-content: center;
+    
+    row-gap: 4rem;
+    column-gap: 2rem ;
+
+}
+
+.card {
+    height: 45rem;
+    width: 36.6rem;
+    color: var(--tt-color-primary);
+    background: var(--bg-card);
+    border-radius: 0.8rem;
+}
+
+.textBase {
+    padding: 2.4rem 2.5rem 3.2rem 2.5rem;
+}
+
+.textBase h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.textBase p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card:hover {
+    filter: brightness(1.5);
+}
+@media (max-width:770px) {
+    
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+}
+@media(max-width:1000px) and (min-width:771px) {
+
+    .cards {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3, 1fr); 
+    }
+
+}
